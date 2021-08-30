@@ -5,7 +5,6 @@ export default makeStyles((theme) => ({
   wraper: {
     backgroundImage: `url(${Image})`,
     height: "100vh",
-    width: "100vw",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },

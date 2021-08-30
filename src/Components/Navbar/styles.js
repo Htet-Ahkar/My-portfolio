@@ -1,18 +1,19 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const drawerWidth = 0;
-
 export default makeStyles((theme) => ({
   appBar: {
-    opacity: "0.7",
+    position: "sticky",
+    opacity: "0",
     boxShadow: "none",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
-
-    // [theme.breakpoints.up("sm")]: {
-    //   width: `calc(100% - ${drawerWidth}px)`,
-    //   marginLeft: drawerWidth,
-    // },
+    scale: "0",
   },
+  active: {
+    transition: "all 300ms ease-in-out 100ms",
+    opacity: "0.7",
+    scale: "1",
+  },
+
   icon: {
     width: "50px",
     height: "50px",
@@ -32,6 +33,9 @@ export default makeStyles((theme) => ({
   },
   button: {
     width: "150px",
+  },
+  buttonActive: {
+    backgroundColor: "#D0CECC",
   },
 
   //padding

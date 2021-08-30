@@ -11,13 +11,21 @@ function App() {
     <>
       <main id="home">
         <Navbar />
-        <Hero />
+        <section>
+          <Hero />
+        </section>
         <section id="about">
           <AboutUs />
         </section>
-        <Skills id="skills" />
-        <Projects id="projects" />
-        <ContactUs id="contact" />
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <ContactUs />
+        </section>
       </main>
     </>
   );
