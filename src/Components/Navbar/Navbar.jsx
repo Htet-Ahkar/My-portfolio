@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
 import useStyles from "./styles";
-import { links } from "./menu";
 
-export default function Navbar() {
+export default function Navbar({ buttons }) {
   const classes = useStyles();
   const [offset, setOffset] = useState(0);
 
@@ -13,7 +12,6 @@ export default function Navbar() {
       setOffset(window.pageYOffset);
     };
   }, []);
-  console.log(offset);
 
   return (
     <>
@@ -33,7 +31,7 @@ export default function Navbar() {
           </Button>
           <div className={classes.grow1} />
           <div className={classes.buttons}>
-            {links.map((link) => (
+            {buttons.map((link) => (
               <Button
                 href={link.url}
                 key={link.id}

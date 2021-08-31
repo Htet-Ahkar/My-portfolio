@@ -2,12 +2,15 @@ import { Container, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 
-const AboutUs = () => {
+const AboutUs = ({ data }) => {
   const classes = useStyles();
+  console.log(data);
   return (
     <div className={classes.wraper}>
-      <Container align="center" className={classes.text} variant="h3">
-        <Typography>This is About us Page.</Typography>
+      <Container>
+        <Typography align="center" className={classes.text} variant="h3">
+          {data.name}.
+        </Typography>
       </Container>
     </div>
   );
