@@ -1,17 +1,78 @@
-import { Container, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
+import image from "../../assets/htetAhkar.jpg";
+import { IconButton } from "@material-ui/core";
+import { Facebook, GitHub, Instagram, LinkedIn } from "@material-ui/icons";
 
 const AboutUs = ({ data }) => {
   const classes = useStyles();
-  console.log(data);
+
   return (
-    <div className={classes.wraper}>
-      <Container>
-        <Typography align="center" className={classes.text} variant="h3">
-          {data.name}.
+    <div className={classes.root}>
+      <Paper className={classes.paper}>
+        <Grid container className={classes.container}>
+          <Grid item>
+            <div className={classes.image}>
+              <img alt="profileImage" src={image} className={classes.image} />
+            </div>
+          </Grid>
+          <Grid item className={classes.textContainer}>
+            <Typography gutterBottom variant="h6">
+              I am {data.name}
+            </Typography>
+            <Typography gutterBottom variant="h6">
+              {data.location}
+            </Typography>
+            <Typography gutterBottom variant="h6">
+              {data.description}
+            </Typography>
+            <Typography gutterBottom variant="h6">
+              Interested in {data.interest}
+            </Typography>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      <div className={classes.socialMedia}>
+        <Typography gutterBottom variant="subtitle1">
+          Social Media
         </Typography>
-      </Container>
+        <div>
+          <IconButton
+            aria-label="GitHub"
+            color="inherit"
+            href="https://github.com/Htet-Ahkar"
+            target="_blank"
+          >
+            <GitHub />
+          </IconButton>
+          <IconButton
+            aria-label="Facebook"
+            color="inherit"
+            href=""
+            target="_blank"
+          >
+            <Facebook />
+          </IconButton>
+          <IconButton
+            aria-label="Instagram"
+            color="inherit"
+            href=""
+            target="_blank"
+          >
+            <Instagram />
+          </IconButton>
+          <IconButton
+            aria-label="LinkedIn"
+            color="inherit"
+            href=""
+            target="_blank"
+          >
+            <LinkedIn />
+          </IconButton>
+        </div>
+      </div>
     </div>
   );
 };
