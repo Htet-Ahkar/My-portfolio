@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
-
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import useStyles from "./styles";
+import MobileNavbar from "./Mobile/MobileNavbar";
 
 export default function Navbar({ buttons }) {
   const classes = useStyles();
   const [offset, setOffset] = useState(0);
+  const theme = useTheme();
+  const isDestop = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     window.onscroll = () => {
@@ -13,7 +22,7 @@ export default function Navbar({ buttons }) {
     };
   }, []);
 
-  return (
+  return isDestop ? (
     <>
       <AppBar
         position="sticky"
@@ -25,7 +34,7 @@ export default function Navbar({ buttons }) {
         <Toolbar>
           <div className={classes.grow} />
           <Button href="#home" className={classes.icon} variant="outlined">
-            <Typography variant="h5" className={classes.title} color="inherit">
+            <Typography variant="h5" color="inherit">
               X
             </Typography>
           </Button>
@@ -51,5 +60,7 @@ export default function Navbar({ buttons }) {
         </Toolbar>
       </AppBar>
     </>
+  ) : (
+    <MobileNavbar offset={offset} buttons={buttons} />
   );
 }
