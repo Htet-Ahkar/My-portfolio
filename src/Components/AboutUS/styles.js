@@ -16,10 +16,10 @@ export default makeStyles((theme) => ({
   //paper
   paper: {
     padding: theme.spacing(2),
-    margin: "auto",
-    marginBottom: "50px",
+    marginTop: 100,
+    marginBottom: 25,
     width: "75%",
-    height: 450,
+    height: 600,
     backgroundColor: "rgba(130, 133, 115, 0.2)",
   },
   container: {
@@ -28,9 +28,12 @@ export default makeStyles((theme) => ({
     justifyContent: "space-around",
   },
   image: {
+    padding: "25px 0",
     width: 250,
     height: 250,
     borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
   },
   img: {
     margin: "auto",
@@ -43,6 +46,13 @@ export default makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
   },
+
+  text: {
+    "@media (max-width: 1048px)": {
+      textAlign: "center",
+    },
+  },
+
   //social media
   socialMedia: {
     display: "flex",

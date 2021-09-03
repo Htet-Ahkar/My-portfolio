@@ -18,16 +18,16 @@ const AboutUs = ({ data }) => {
             </div>
           </Grid>
           <Grid item className={classes.textContainer}>
-            <Typography gutterBottom variant="h6">
+            <Typography className={classes.text} gutterBottom variant="h6">
               I am {data.name}
             </Typography>
-            <Typography gutterBottom variant="h6">
+            <Typography className={classes.text} gutterBottom variant="h6">
               {data.location}
             </Typography>
-            <Typography gutterBottom variant="h6">
+            <Typography className={classes.text} gutterBottom variant="h6">
               {data.description}
             </Typography>
-            <Typography gutterBottom variant="h6">
+            <Typography className={classes.text} gutterBottom variant="h6">
               Interested in {data.interest}
             </Typography>
           </Grid>

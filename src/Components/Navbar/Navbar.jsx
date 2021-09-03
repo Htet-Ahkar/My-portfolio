@@ -42,6 +42,7 @@ export default function Navbar({ buttons }) {
           <div className={classes.buttons}>
             {buttons.map((link) => (
               <Button
+                disabled={offset > link.min && offset < link.max && true}
                 href={link.url}
                 key={link.id}
                 className={`
