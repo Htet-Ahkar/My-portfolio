@@ -1,7 +1,6 @@
 import { Grid, Paper, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
-import image from "../../assets/htetAhkar.jpg";
 import { IconButton } from "@material-ui/core";
 import { Facebook, GitHub, Instagram, LinkedIn } from "@material-ui/icons";
 
@@ -14,7 +13,11 @@ const AboutUs = ({ data }) => {
         <Grid container className={classes.container}>
           <Grid item>
             <div className={classes.image}>
-              <img alt="profileImage" src={image} className={classes.image} />
+              <img
+                alt="profileImage"
+                src={process.env.PUBLIC_URL + "/assets/htetAhkar.jpg"}
+                className={classes.image}
+              />
             </div>
           </Grid>
           <Grid item className={classes.textContainer}>

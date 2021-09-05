@@ -1,9 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../../assets/About-us-page-background.jpg";
 
 export default makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${Image})`,
+    backgroundImage: `url(${
+      process.env.PUBLIC_URL + "/assets/About-us-page-background.jpg"
+    })`,
+    backgroundRepeat: "no-repeat",
     height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",

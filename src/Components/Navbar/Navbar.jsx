@@ -15,6 +15,7 @@ export default function Navbar({ buttons }) {
   const [offset, setOffset] = useState(0);
   const theme = useTheme();
   const isDestop = useMediaQuery(theme.breakpoints.up("md"));
+  console.log(offset);
 
   useEffect(() => {
     window.onscroll = () => {

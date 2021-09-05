@@ -1,13 +1,15 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../../assets/Hero-Background.jpg";
 
 export default makeStyles((theme) => ({
   wraper: {
-    backgroundImage: `url(${Image})`,
+    backgroundImage: `url(${
+      process.env.PUBLIC_URL + "/assets/Hero-Background.jpg"
+    })`,
     height: "100vh",
     width: "100vw",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   },
   text: {
     marginLeft: "auto",

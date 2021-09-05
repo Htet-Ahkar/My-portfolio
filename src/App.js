@@ -36,7 +36,7 @@ function App() {
             <AboutUs data={Data.aboutUs} />
           </section>
           <section id="skills">
-            <Skills />
+            <Skills data={Data.skills} />
           </section>
           <section id="projects">
             <Projects />
