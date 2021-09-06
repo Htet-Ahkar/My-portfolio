@@ -27,7 +27,7 @@
         "text": "Contact Us",
         "url": "#contact",
         "min": "2600",
-        "max": "3000"
+        "max": "4000"
       }
     ]
   },
@@ -56,6 +56,18 @@
         "id": 3,
         "year": 2021,
         "skills": "I learned HTML5, CSS3, JavaScript, React and Material UI."
+      }
+    ]
+  },
+  "projects": {
+    "images": [
+      {
+        "name": "Tutorials",
+        "url": "/assets/Tutorials.jpg"
+      },
+      {
+        "name": "My Projects",
+        "url": "/assets/My-projects.jpg"
       }
     ]
   }
