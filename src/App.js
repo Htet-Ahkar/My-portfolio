@@ -39,7 +39,7 @@ function App() {
             <Skills data={Data.skills} />
           </section>
           <section id="projects">
-            <Projects data={Data.projects.images} />
+            <Projects data={Data.projects} />
           </section>
           <section id="contact">
             <ContactUs />

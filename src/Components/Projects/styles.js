@@ -16,6 +16,10 @@ export default makeStyles((theme) => ({
       position: "relative",
       top: 25,
     },
+    "@media (max-width: 505px)": {
+      position: "relative",
+      top: 0,
+    },
   },
   paper: {
     boxShadow: `10px 10px 8px #8f9ca3`,
@@ -54,5 +58,20 @@ export default makeStyles((theme) => ({
     top: -10,
     opacity: "1",
     transform: "scale(1)",
+  },
+  backDrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: `rgb(164, 182, 192)`,
+  },
+  backDropLeft: {
+    backgroundColor: `rgb(164, 182, 192)`,
+  },
+  backDropRight: {
+    backgroundColor: `rgb(242, 171, 45)`,
+  },
+  //for backDrop
+  stopScroll: {
+    height: `100%`,
+    overflow: `hidden`,
   },
 }));
