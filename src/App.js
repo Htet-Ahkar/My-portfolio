@@ -7,7 +7,14 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { createTheme, MuiThemeProvider } from "@material-ui/core";
 
+const THEME = createTheme({
+  typography: {
+    fontFamily: `'Caveat', cursive, "Roboto", "Helvetica", "Arial", sans-serif`,
+    fontSize: 16,
+  },
+});
 function App() {
   const [Data, setData] = useState();
 
@@ -27,24 +34,26 @@ function App() {
   return (
     <>
       {Data && (
-        <main id="home">
-          <Navbar buttons={Data.navbar.links} />
-          <section>
-            <Hero data={Data.hero} />
-          </section>
-          <section id="about">
-            <AboutUs data={Data.aboutUs} />
-          </section>
-          <section id="skills">
-            <Skills data={Data.skills} />
-          </section>
-          <section id="projects">
-            <Projects data={Data.projects} />
-          </section>
-          <section id="contact">
-            <ContactUs />
-          </section>
-        </main>
+        <MuiThemeProvider theme={THEME}>
+          <main id="home">
+            <Navbar buttons={Data.navbar.links} />
+            <section>
+              <Hero data={Data.hero} />
+            </section>
+            <section id="about">
+              <AboutUs data={Data.aboutUs} />
+            </section>
+            <section id="skills">
+              <Skills data={Data.skills} />
+            </section>
+            <section id="projects">
+              <Projects data={Data.projects} />
+            </section>
+            <section id="contact">
+              <ContactUs />
+            </section>
+          </main>
+        </MuiThemeProvider>
       )}
     </>
   );

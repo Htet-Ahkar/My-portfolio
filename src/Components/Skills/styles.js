@@ -31,7 +31,9 @@ export default makeStyles((theme) => ({
     left: `34%`,
     "@media (max-width: 400px)": {
       top: `calc(29% + 61px)`,
-      left: ` calc(34% - 30px)`,
+      left: ` calc(40% - 30px)`,
+      height: 30,
+      width: 100,
     },
   },
   yearSelector: {

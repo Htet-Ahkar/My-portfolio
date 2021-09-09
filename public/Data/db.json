@@ -3,7 +3,7 @@
     "links": [
       {
         "id": 1,
-        "text": "About Us",
+        "text": "About Me",
         "url": "#about",
         "min": "700",
         "max": "1400"
@@ -24,7 +24,7 @@
       },
       {
         "id": 4,
-        "text": "Contact Us",
+        "text": "Contact Me",
         "url": "#contact",
         "min": "2600",
         "max": "4000"
@@ -32,7 +32,7 @@
     ]
   },
   "hero": {
-    "text": "This is Hero page."
+    "text": "“First, solve the problem. Then, write the code.” – John Johnson"
   },
   "aboutUs": {
     "name": "Htet Ahkar(Xero)",
@@ -96,7 +96,7 @@
       {
         "id": 1,
         "title": "My Portfolio",
-        "technology": "HTML5, CSS, React.js, Material UI,  ",
+        "technology": "HTML5, CSS, React.js, Material UI, Email.js",
         "github": "https://github.com/Htet-Ahkar/My-portfolio",
         "youtube": "",
         "URL": "",

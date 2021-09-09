@@ -35,7 +35,11 @@ const Turorials = ({ data }) => {
       >
         <Grid item>
           <Paper elevation={3} className={`${classes.items} ${classes.item1}`}>
-            <ButtonBase className={classes.image}>
+            <ButtonBase
+              href={data[index].URL}
+              target="_blank"
+              className={classes.image}
+            >
               <img
                 className={classes.img}
                 src={data[index].image}
